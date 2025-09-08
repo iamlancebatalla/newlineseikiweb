@@ -31,6 +31,7 @@
       background-color: #fff;
       color: #000;
     }
+
     /* Force Section 2 image on left */
     section.section-2 {
       flex-direction: row !important;
@@ -62,12 +63,32 @@
     .btn-primary {
       background-color: #ff6a5c;
       color: white;
+      background-color: #ff6a5c;
+      color: white;
+      transition: all 0.3s ease; /* smooth hover animation */
+    }
+    .btn-primary:hover {
+    background-color: #e85a4a; /* darker shade on hover */
+    transform: translateY(-2px); /* slight lift */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
     .btn-secondary {
       background-color: transparent;
       border: 1px solid #999;
       color: inherit;
+      background-color: transparent;
+      border: 1px solid #999;
+      color: inherit;
+      transition: all 0.3s ease;
     }
+    .btn-secondary:hover {
+    background-color: #fff;  /* white background */
+    color: #000;            /* black text */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+
     footer {
       background-color: #0f0a07;
       color: white;
@@ -221,7 +242,6 @@
     </div>
     <img src="model4.jpg" alt="Section 5">
   </section>
-
   <!-- Footer -->
   <footer>
     <div class="top">
