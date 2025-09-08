@@ -22,23 +22,24 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 60px 10%;
+      padding: 0 10%;
       gap: 50px;
+      min-height: 100vh; /* 🔥 full screen height */
     }
     section:nth-child(even) {
       flex-direction: row-reverse;
       background-color: #fff;
       color: #000;
     }
-    /* Force Section 2 (second section) to have image left */
+    /* Force Section 2 image on left */
     section.section-2 {
       flex-direction: row !important;
       background-color: #fff;
       color: #000;
     }
     section img {
-      width: 450px;
-      max-width: 100%;
+      width: 45%;
+      max-width: 500px;
       height: auto;
       border-radius: 12px;
     }
@@ -72,6 +73,10 @@
       color: white;
       padding: 50px 10%;
       text-align: left;
+      min-height: 100vh; /* 🔥 footer also fills screen */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
     footer .top {
       display: flex;
