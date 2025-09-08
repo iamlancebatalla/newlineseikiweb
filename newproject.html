@@ -88,11 +88,117 @@
       transition: all 0.3s ease;
     }
     .btn-secondary:hover {
-    background-color: #fff;  /* white background */
+    background-color: white;  /* white background */
     color: #000;            /* black text */
     transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
+
+/* Section 2 Learn More Button */
+.section-2 .btn-primary {
+  background-color: #000; /* Black background */
+  color: #fff;            /* White text */
+  border: 1px solid #fff; /* Optional: white border */
+  transition: all 0.3s ease;
+}
+
+.section-2 .btn-primary:hover {
+  background-color: #fff; /* White background */
+  color: #000;            /* Black text */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+/* Section 2 View Button */
+.section-2 .btn-view {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border: none;   
+  background: transparent;
+  color: #fff;              /* white text */
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.section-2 .btn-view span {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.section-2 .btn-view i {
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+/* Hover Effect */
+.section-2 .btn-view:hover {
+  background: transparent;        /* white background */
+  color: white;             /* black text */
+}
+
+.section-2 .btn-view:hover span {
+  transform: scale(1.1);   /* zoom text */
+}
+
+.section-2 .btn-view:hover i {
+  transform: translateX(4px); /* arrow moves */
+}
+
+    /* Section 4 Learn More Button */
+.btn-learnmore {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: transparent;
+  border: none;              /* no border */
+  color: #000;               /* black text */
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-learnmore span {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.btn-learnmore i {
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+
+  .btn-explore {
+  background: transparent;
+  border: 1px solid #000;
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+.btn-explore:hover {
+  background: #000;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+
+/* Hover Effect */
+.btn-learnmore:hover {
+  background: transparent;          /* black background */
+  color: black;               /* white text */
+}
+
+.btn-learnmore:hover span {
+  transform: scale(1.1);     /* zoom text */
+}
+
+.btn-learnmore:hover i {
+  transform: translateX(4px); /* arrow moves */
+}
 
 
     footer {
@@ -128,6 +234,12 @@ footer .middle {
   border-bottom: 1px solid #333;
   
 }
+  footer .middle img {
+  height: 40px;   /* adjust size */
+  width: auto;
+  display: block;
+}
+
 
 footer .logo {
   font-family: "Cursive", sans-serif;
@@ -174,6 +286,15 @@ footer .bottom {
   gap: 20px;
   
 }
+  footer .bottom a {
+  color: white;
+  text-decoration: none;
+}
+
+footer .bottom a:hover {
+  text-decoration: underline;
+}
+
 
 
       /* Section 5 Styling */
@@ -289,17 +410,21 @@ footer .bottom {
   <img src="home_main.jpg" alt="Section 1">
 </section>
 
-  <!-- Section 2 (Image Left) -->
+  <!--section 2-->
   <section class="section-2">
-    <img src="model.jpg" alt="Section 2">
-    <div>
-      <small>Precision</small>
-      <h2>Explore Our Standard Measuring Counters</h2>
-      <p>Our standard measuring counters deliver unmatched accuracy and reliability for various industrial applications. Discover how our innovative solutions can enhance your operational efficiency.</p>
-      <button class="btn btn-primary">Learn More</button>
-      <button class="btn btn-secondary">View</button>
-    </div>
-  </section>
+  <img src="model.jpg" alt="Section 2">
+  <div>
+    <small>Precision</small>
+    <h2>Explore Our Standard Measuring Counters</h2>
+    <p>Our standard measuring counters deliver unmatched accuracy and reliability for various industrial applications. Discover how our innovative solutions can enhance your operational efficiency.</p>
+    <button class="btn btn-primary">Learn More</button>
+    <button class="btn-view">
+  <span>View</span> <i class="fas fa-angle-right"></i>
+</button>
+
+  </div>
+</section>
+
 
   <!-- Section 3 -->
   <section>
@@ -317,8 +442,10 @@ footer .bottom {
       <small>Innovate</small>
       <h2>Transforming Industries with IoT Solutions</h2>
       <p>Our IoT solutions empower businesses to optimize operations and enhance productivity. Experience seamless connectivity and real-time monitoring for smarter decision-making.</p>
-      <button class="btn btn-secondary">Explore</button>
-      <button class="btn btn-primary">Learn More</button>
+      <button class="btn btn-explore">Explore</button>
+       <button class="btn-learnmore">
+  <span>Learn More</span> <i class="fas fa-angle-right"></i>
+        </button>   
     </div>
   </section>
 
