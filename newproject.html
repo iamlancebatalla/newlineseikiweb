@@ -13,6 +13,89 @@
       box-sizing: border-box;
       font-family: Arial, Helvetica, sans-serif;
     }
+    /* Navigation Bar */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: #000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.header .logo {
+    height: 40px;
+    width: auto;
+}
+
+.navbar a {
+    font-size: 1rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #ff6a5c;
+}
+
+/* Mobile-first approach for responsive design */
+.hamburger-icon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+@media (max-width: 992px) {
+    .hamburger-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        transform: translateY(-100%);
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.5s ease;
+    }
+
+    .menu-toggle:checked ~ .navbar {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+    
+    .navbar a {
+        margin: 15px 0;
+        display: block;
+        text-align: center;
+    }
+
+    /* Shift body content down to prevent it from being hidden behind the fixed navbar */
+    body {
+      padding-top: 80px;
+    }
+}
     body {
       background-color: #0f0a07;
       color: white;
@@ -398,6 +481,22 @@ footer .bottom a:hover {
   </style>
 </head>
 <body>
+  <header class="header">
+    <a href="#" class="logo-link">
+        <img src="header_logo.png" alt="Line Seiki Logo" class="logo">
+    </a>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="hamburger-icon">
+        <i class="fas fa-bars"></i>
+    </label>
+    <nav class="navbar">
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">Services</a>
+        <a href="#">Case Studies</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
 
   <!-- Section 1 -->
 <section class="section-1">
